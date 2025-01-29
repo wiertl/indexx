@@ -3,110 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz Rekrutacyjny do Wolontariatu</title>
+    <title>Formularz Rekrutacyjny - Ochroniarz</title>
     <style>
         body {
-            font-family: 'Verdana', sans-serif;
-            background-color: #b5ffd5;
+            font-family: Arial, sans-serif;
             margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        .formularz {
-            background-color: #ffffff; 
-            border: 2px solid #b9ff81; 
+        .container {
+            max-width: 500px;
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
-            width: 600px;
-            margin: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #0066cc; /* Intensywny niebieski */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         label {
             font-weight: bold;
         }
-        .section {
-            margin-bottom: 15px;
-        }
-        .input-group {
-            margin-bottom: 10px;
-        }
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"], input[type="number"], input[type="email"], select, textarea {
+        input, select, textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 8px;
+            margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        input[type="radio"], input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        button, input[type="submit"], input[type="reset"] {
-            background-color: #0066cc;
-            color: green;
-            padding: 15px 20px;
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
-            background-color: #004080;
+        button:hover {
+            background: #218838;
         }
     </style>
 </head>
 <body>
-    <div class="formularz">
-        <h1>Formularz Rekrutacyjny do Wolontariatu</h1>
-        <form action="mailto:kontakt@example.com" method="post" enctype="text/plain">
-            <div class="section">
-                <label for="motywacja">Dlaczego chcesz być wolontariuszem?</label>
-                <textarea id="motywacja" name="motywacja" rows="5" placeholder="Opisz swoja motywacje"></textarea>
-            </div>
-            <div class="section">
-                <p>Wybierz obszar działalności:</p>
-                <label><input type="radio" name="obszar" value="Pomoc społeczna" checked> Pomoc społeczna</label><br>
-                <label><input type="radio" name="obszar" value="Ochrona w Internecie">Ochrona w Internecie</label><br>
-                <label><input type="radio" name="obszar" value="Edukacja">Edukacja</label><br>
-                <label><input type="radio" name="obszar" value="Ochrona Środowiska">Ochrona Środowiska</label>
-            </div>
-            <div class="section">
-                <label for="imie">Imię:</label>
-                <input type="text" id="imie" name="imie" placeholder="Wpisz swoje imię" required>
-                <label for="email">Adres e-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required>
-                <label for="telefon">Numer telefonu (max. 9 cyfr):</label>
-                <input type="text" id="telefon" name="telefon" maxlength="9" pattern="\d{9}" placeholder="Wpisz swój numer telefonu" required>
-                <label for="wiek">Wiek:</label>
-                <input type="number" id="wiek" name="wiek" placeholder="Wpisz swój wiek" min="18" required>
-            </div>
-            <div class="section">
-                <p>Wybierz swoje umiejętności:</p>
-                <label><input type="checkbox" name="umiejetnosci" value="Orientacja w Terenie"> Organizacja</label><br>
-                <label><input type="checkbox" name="umiejetnosci" value="Pracowanie w Zespole"> Organizacja</label><br>
-                <label><input type="checkbox" name="umiejetnosci" value="Komunikacja w Grupie"> Praca zespołowa</label><br>
-                <label><input type="checkbox" name="umiejetnosci" value="Opanowany Komputer"> Obsługa komputera</label>
-            </div>
-            <div class="section">
-                <label for="miasto">Wybierz Miasto:</label>
-                <select id="miasto" name="miasto">
-                    <option value="Tczew" selected>Tczew</option>
-                    <option value="Pruszcz Gdański">Pruszcz Gdański</option>
-                    <option value="Gdynia">Gdynia</option>
-                    <option value="Sopot">Sopot</option>
-                    <option value="Gdańsk">Gdańsk</option>
-                </select>
-            </div>
-            <div class="section">
-                <input type="submit"value="WYŚLIJ">
-                <input type="reset"value="CZYŚĆ">
-            </div>
+    <div class="container">
+        <h2>Formularz Rekrutacyjny - Ochroniarz</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Numer telefonu:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="experience">Doświadczenie (lata):</label>
+            <input type="number" id="experience" name="experience" min="0" required>
+            
+            <label for="license">Czy posiadasz licencję ochroniarską?</label>
+            <select id="license" name="license" required>
+                <option value="tak">Tak</option>
+                <option value="nie">Nie</option>
+            </select>
+            
+            <label for="message">Dodatkowe informacje:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            
+            <button type="submit">Wyślij zgłoszenie</button>
         </form>
     </div>
-<A HREF="z1_z6_jasinski.html">cofnij</A>
 </body>
 </html>
