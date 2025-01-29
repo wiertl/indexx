@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 18px;
+        }
+        td {
+            font-size: 16px;
+        }
+        .model {
+            font-weight: bold;
+            color: #FFD700;
+        }
+        .aktywny {
+            color: green;
+            font-weight: bold;
+        }
+        .header {
+            background-color: #006666;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="5" class="header">Dane Komputerowe – Jakubiak Wojciech 2K1</th>
+        </tr>
+        <tr>
+            <th>Model Karty Graficznej</th>
+            <th>Taktowanie Bazowe</th>
+            <th>Rozmiar Pamięci</th>
+            <th>Szyna Pamięci</th>
+            <th>Typ Chłodzenia</th>
+        </tr>
+        <tr>
+            <td class="model" bgcolor="red">GTX 1660</td>
+            <td bgcolor="red">1785 MHz</td>
+            <td bgcolor="red">6 GB</td>
+            <td bgcolor="red">192 Bit</td>
+            <td class="aktywny" rowspan="6" bgcolor="lime">Aktywne</td>
+        </tr>
+        <tr bgcolor="red">
+            <td class="model">GTX 1050</td>
+            <td>1506 MHz</td>
+            <td>4 GB</td>
+            <td>192 Bit</td>
+        </tr>
+        <tr bgcolor="orange">
+            <td class="model">RTX 2060</td>
+            <td>1265 MHz</td>
+            <td>6 GB</td>
+            <td>192 Bit</td>
+        </tr>
+        <tr bgcolor="orange">
+            <td class="model">RTX 3060</td>
+            <td>1792 MHz</td>
+            <td>12 GB</td>
+            <td>192 Bit</td>
+        </tr>
+        <tr bgcolor="purple">
+            <td class="model">RTX 4060</td>
+            <td>2310 MHz</td>
+            <td>8 GB</td>
+            <td>128 Bit</td>
 
+        </tr>
+        <tr bgcolor="purple">
+            <td class="model">RTX 4090</td>
+            <td>2595 MHz</td>
+            <td>25 GB</td>
+            <td>384 Bit</td>
+
+        </tr>
+    </table>
+	    <br>
+    <a href="index.html">wróć</a>
+</body>
+</html>
