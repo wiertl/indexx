@@ -1,21 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
- <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Layout Strony</title>
+    <style>
+        .menu-figura {
+            position: relative;
+            margin: 10px auto;
+        }
+
+        #czerwony_trojkat {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 59px solid red;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #niebieski_prostokat {
+            width: 46px;
+            height: 46px;
+            background-color: blue;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #zolty_trojkat {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 59px solid yellow;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #zielony_okrag {
+            width: 46px;
+            height: 46px;
+            background-color: green;
+            border-radius: 50%;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #brazowy_prostokat {
+            width: 46px;
+            height: 46px;
+            background-color: brown;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<table width=95% border="1" align="center">
- <tr>
- <td width=18% align="center">
- <a href="http://www.kuratorium.gda.pl" target="strony">Kuratorium</a>
- <br>
- <a href="http://www.zse.gda.pl" target="strony">ZSE Gdańsk</a>
- </td>
- <td align=center><iframe width=650 height=650 name="strony" src="start.html" border="0"></iframe>
- </td>
- <td width=18% align="center"><a href="start.html" target="strony">Start</a>
- </td>
- </tr>
-</table>
+    <table width="65%" border="1" align="center">
+        <tr>
+            <td colspan="3" align="center">
+               <iframe scrolling="no" width="1300" height="150" name="obszar_logo" src="logo_jasinski.html" border="0"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td width="18%" align="center">
+                <b>lewe menu</b>
+                <ul>
+                    <li><a href="https://zse.edu.gdansk.pl/" target="obszar_glowny">Strona ZSE</a></li>
+                    <li><a href="https://www.kuratorium.gda.pl/" target="obszar_glowny">Kuratorium</a></li>
+                    <li><a href="https://pl.wikipedia.org/wiki/Wikipedia:Strona_główna" target="obszar_glowny">Wikipedia</a></li>
+                    <li><a href="https://www.trojmiasto.pl" target="obszar_glowny">Wiadomosci z Trojmiasta</a></li>
+                    <li><a href="glowny_jasinski.html" target="obszar_glowny">Powrot do Glownej</a></li>
+                    <li><a href="VID_20250123_182017735.mp4" target="obszar_glowny">Filmik Nazwisko</a></li>
+                </ul>
+            </td>
+            <td align="center">
+                <iframe width="800" height="500" name="obszar_glowny" src="glowny_jasinski.html" scrolling="yes" border="0"></iframe>
+            </td>
+            <td width="18%" align="center">
+                <b>prawe menu</b>
+                <div class="menu-figura">
+                    <a href="jasinski_zip.zip" download>
+                        <div id="czerwony_trojkat"></div>
+                    </a>
+                </div>
+                <div class="menu-figura">
+                    <a href="tabela_jasinski.html" target="obszar_glowny">
+                        <div id="niebieski_prostokat"></div>
+                    </a>
+                </div>
+                <div class="menu-figura">
+                    <a href="formularz_jasinski.html" target="obszar_glowny">
+                        <div id="zolty_trojkat"></div>
+                    </a>
+                </div>
+                <div class="menu-figura">
+                    <a href="mailto:szyjasinr1@gmail.com">
+                        <div id="zielony_okrag"></div>
+                    </a>
+                </div>
+                <div class="menu-figura">
+                    <a href="z1_z6_jasinski.html" target="obszar_glowny">
+                        <div id="brazowy_prostokat"></div>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+               <iframe scrolling="no" width="1300" height="150" name="obszar_stopka" src="stopka_jasinski.html" border="0"></iframe>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
